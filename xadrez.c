@@ -32,5 +32,27 @@ int main() {
         contadorRainha++;
     } while (contadorRainha <= casasRainha);
 
+    // -------------------------------
+    // Movimento do Cavalo (usando FOR + WHILE aninhados)
+    // -------------------------------
+    int casasBaixo = 2;    // número de casas para baixo
+    int casasEsquerda = 1; // número de casas para esquerda
+    printf("\nMovimento do Cavalo:\n");
+
+    // FOR controla os dois movimentos para baixo
+    for (int i = 1; i <= casasBaixo; i++) {
+        printf("Baixo\n");
+
+        // Dentro do FOR, usamos WHILE para o movimento para esquerda
+        // Esse while só executa na última iteração (quando o cavalo já desceu 2 casas)
+        if (i == casasBaixo) {
+            int contadorEsquerda = 1;
+            while (contadorEsquerda <= casasEsquerda) {
+                printf("Esquerda\n");
+                contadorEsquerda++;
+            }
+        }
+    }
+
     return 0;
 }
